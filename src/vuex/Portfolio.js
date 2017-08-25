@@ -36,12 +36,19 @@ export const PortfolioModule = {
   mutations: {
     loadPortfolio (state, payload) {
       state.portfolio = payload.data.portfolio
+      if (!state.portfolio) {
+        state.portfolio = []
+      }
       state.cash = payload.data.cash
     },
     sell (state, payload) {
       var holding = state.portfolio.find(s => s.ticker === payload.ticker)
-      holding.amount -= payload.amount
-      state.cash += payload.price * payload.amount
+      var effectiveAmount = Math.min(holding.amount, payload.amount)
+      holding.amount -= effectiveAmount
+      state.cash += payload.price * effectiveAmount
+      if (holding.amount === 0) {
+        state.portfolio = state.portfolio.filter(s => s.ticker !== payload.ticker)
+      }
     },
     buy (state, payload) {
       var holding = state.portfolio.find(s => s.ticker === payload.ticker)

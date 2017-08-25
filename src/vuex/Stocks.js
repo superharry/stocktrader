@@ -26,6 +26,7 @@ export const StockModule = {
       state.stocks = payload.data.stocks
     },
     day (state) {
+      console.log('A new day:')
       state.stocks.forEach(s => {
         var rand = Math.floor((Math.random() * 20) + 90) / 100
         const oldPrice = s.price

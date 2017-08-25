@@ -83,7 +83,6 @@ const store = new Vuex.Store({
   }
 })
 
-console.log('Initial store hydration')
 store.dispatch('load')
 
 /* eslint-disable no-new */

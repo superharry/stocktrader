@@ -3,6 +3,7 @@
 Vue.js course project, using:
 
 * [axios](https://github.com/mzabriskie/axios) for web communication since vue-resources is deprecated;
+* [Firebase](https://firebase.google.com) as mock backend;
 * [vuex](https://vuex.vuejs.org) for state management (two modules); and
 * [Element](https://github.com/ElemeFE/element) for basic styling.
 

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Stocks from '@/components/Stocks'
-import Portfolio from '@/components/Portfolio'
+import Stocks from '@/components/stocks/Stocks'
+import Portfolio from '@/components/portfolio/Portfolio'
 
 Vue.use(Router)
 
