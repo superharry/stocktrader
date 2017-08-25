@@ -1,10 +1,14 @@
 # Stock Trader
 
-Vue.js course project, using vuex, vue-router, and Element-UI
+Vue.js course project, using:
+
+* [axios](https://github.com/mzabriskie/axios) for web communication since vue-resources is deprecated;
+* [vuex](https://vuex.vuejs.org) for state management (two modules); and
+* [Element](https://github.com/ElemeFE/element) for basic styling.
 
 ## Online Demo
 
-See [guide](http://vuejs-templates.github.io/webpack/)
+See [guide](http://vuejs-deploy-harry.s3-website-us-east-1.amazonaws.com)
 
 ## Local Build
 
