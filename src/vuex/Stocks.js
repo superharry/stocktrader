@@ -11,7 +11,7 @@ export const StockModule = {
     day ({ commit }) {
       setTimeout(() => { commit('day') }, 200)
     },
-    loadStocks: ({ state, commit, rootState }, payload) => {
+    async loadStocks ({ state, commit, rootState }, payload) {
       firebase.get('/stocks.json').then(response => {
         commit('loadStocks', response)
       })

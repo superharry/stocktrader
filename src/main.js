@@ -57,14 +57,11 @@ import { PortfolioModule } from './vuex/Portfolio.js'
 
 const store = new Vuex.Store({
   actions: {
-    load ({ dispatch, commit }) {
-      dispatch('loadStocks')
-        .then(() => {
-          dispatch('loadPortfolio')
+    async load ({ dispatch, commit }) {
+      await dispatch('loadStocks')
+      dispatch('loadPortfolio')
             .then(() => commit('loaded'))
             .catch(error => console.log(error))
-        })
-        .catch(error => console.log(error))
     },
     save ({ dispatch, commit }) {
       dispatch('saveStocks')
