@@ -8,7 +8,7 @@ Vue.js course project, using:
 
 ## Online Demo
 
-See [guide](http://vuejs-deploy-harry.s3-website-us-east-1.amazonaws.com)
+Hosted on [Amazon S3](http://vuejs-deploy-harry.s3-website-us-east-1.amazonaws.com)
 
 ## Local Build
 
